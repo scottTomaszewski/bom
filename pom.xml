@@ -4,6 +4,7 @@
   <groupId>test</groupId>
   <artifactId>bom</artifactId>
   <version>TEMPLATE</version>
+  <type>pom</type>
   
   <properties>
     <cdm-version>7.4.0</cdm-version>
