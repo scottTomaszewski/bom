@@ -3,7 +3,7 @@
 
   <groupId>test</groupId>
   <artifactId>bom</artifactId>
-  <version>TEMPLATE</version>
+  <version>1.2.3-TEMPLATE</version>
   <packaging>pom</packaging>
   
   <properties>
