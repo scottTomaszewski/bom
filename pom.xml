@@ -36,4 +36,17 @@
     </dependency>
   </dependencies>
 
+  <profiles>
+    <profile>
+      <id>buildBom</id>
+      <build>
+        <resources>
+           <resource>
+             <directory>.</directory>
+             <filtering>true</filtering>
+           </resource>
+         </resources>
+      </build>
+    </profile>
+  </profiles>
 </project>
