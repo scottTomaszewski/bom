@@ -40,6 +40,39 @@
     <profile>
       <id>buildBom</id>
       <build>
+ 	<plugins>
+	  <plugin>
+            <groupId>com.google.code.maven-replacer-plugin</groupId>
+            <artifactId>replacer</artifactId>
+            <executions>
+              <execution>
+                <id>set-release-build-number</id>
+                <phase>validate</phase>
+                <goals>
+                  <goal>replace</goal>
+                </goals>
+                <configuration>
+                  <basedir>${basedir}</basedir>
+                  <includes>
+                    <include>pom.xml</include>
+                  </includes>
+                  <replacements>
+                    <replacement>
+                      <token><![CDATA[(?<=>)${version.platform}(?=<)]]></token>
+                      <value>${version.platform}</value>
+                    </replacement>
+                  </replacements>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>buildBomOld</id>
+      <build>
         <resources>
            <resource>
              <directory>.</directory>
