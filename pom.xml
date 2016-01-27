@@ -22,23 +22,25 @@
     <dependency>
       <groupId>test</groupId>
       <artifactId>ba</artifactId>
-      <version>${version.platform}</version>
+      <version>PLATFORM_VERSION</version>
     </dependency>
     <dependency>
       <groupId>test</groupId>
       <artifactId>ds</artifactId>
-      <version>${version.platform}</version>
+      <version>PLATFORM_VERSION</version>
     </dependency>
     <dependency>
       <groupId>test</groupId>
       <artifactId>ms</artifactId>
-      <version>${version.platform}</version>
+      <version>PLATFORM_VERSION</version>
     </dependency>
   </dependencies>
 
   <profiles>
+    <!-- Build with mvn -PbuildBom -Dversion.platform=8 -->
     <profile>
       <id>buildBom</id>
+      <defaultGoal>validate</defaultGoal>      
       <build>
  	<plugins>
 	  <plugin>
@@ -58,7 +60,7 @@
                   </includes>
                   <replacements>
                     <replacement>
-                      <token><![CDATA[(?<=>)${version.platform}(?=<)]]></token>
+                      <token><![CDATA[(?<=>)PLATFORM_VERSION(?=<)]]></token>
                       <value>${version.platform}</value>
                     </replacement>
                   </replacements>
@@ -67,18 +69,6 @@
             </executions>
           </plugin>
         </plugins>
-      </build>
-    </profile>
-
-    <profile>
-      <id>buildBomOld</id>
-      <build>
-        <resources>
-           <resource>
-             <directory>.</directory>
-             <filtering>true</filtering>
-           </resource>
-         </resources>
       </build>
     </profile>
   </profiles>
