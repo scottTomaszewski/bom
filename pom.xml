@@ -40,8 +40,8 @@
     <!-- Build with mvn -PbuildBom -Dversion.platform=8 -->
     <profile>
       <id>buildBom</id>
-      <defaultGoal>validate</defaultGoal>      
       <build>
+        <defaultGoal>validate</defaultGoal>      
  	<plugins>
 	  <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
