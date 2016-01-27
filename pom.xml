@@ -22,17 +22,17 @@
     <dependency>
       <groupId>test</groupId>
       <artifactId>ba</artifactId>
-      <version>${version.ba}</version>
+      <version>${version.platform}</version>
     </dependency>
     <dependency>
       <groupId>test</groupId>
       <artifactId>ds</artifactId>
-      <version>${version.ds}</version>
+      <version>${version.platform}</version>
     </dependency>
     <dependency>
       <groupId>test</groupId>
       <artifactId>ms</artifactId>
-      <version>${version.ms}</version>
+      <version>${version.platform}</version>
     </dependency>
   </dependencies>
 
